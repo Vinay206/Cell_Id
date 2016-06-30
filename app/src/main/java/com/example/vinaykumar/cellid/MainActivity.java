@@ -58,7 +58,11 @@ public class MainActivity extends AppCompatActivity {
                     textSS.setText("GSM Signal : " + String.valueOf(css) + " dBm");//+String.valueOf(css));
                     textCID.setText("GSM Cell id : " + String.valueOf(cid));
                     textLAC.setText("GSM Location Area Code: " + String.valueOf(lac));
-                    toast.setText("Updated");
+
+                    String cids = String.valueOf(cid),x,lacs = String.valueOf(lac), y;
+                    x = cids.substring(0 , cids.length()-1);
+                    y = lacs.substring(0 , lacs.length()-1);
+                    toast.setText(y+" "+x);
                     toast.show();
 
                 } catch (Exception e) {
